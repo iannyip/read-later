@@ -7,7 +7,6 @@ const Form = ({ list, updateList }) => {
   const changedField = (event) => {
     const linkField = event.target.value;
     setField(linkField);
-    console.log(field);
   };
   // Callback function: for button
   const submitLink = (event) => {
@@ -25,13 +24,19 @@ const Form = ({ list, updateList }) => {
   );
 };
 
-const LinkList = ({ links }) => {
-  console.log("this is the list");
-  return <div>Lnks</div>;
+const LinkList = ({ list }) => {
+  console.log("~~~ List element ~~~");
+  const linkItems = list.map((item) => <li key={item}>{item}</li>);
+  return (
+    <div>
+      <h1>Link List</h1>
+      <ol>{linkItems}</ol>
+    </div>
+  );
 };
 
 const ReadLinks = () => {
-  console.log("this is the list");
+  console.log("~~~ Read element ~~~");
   return <div>Read</div>;
 };
 
