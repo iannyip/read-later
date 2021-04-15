@@ -1,9 +1,10 @@
-import React from 'react';
+import React from "react";
+
+const Form = () => {
+  console.log("this is the form");
+};
 
 export default function App() {
-  return (
-    <div>
-      This is App.jsx
-    </div>
-  );
+  const [link, setLink] = useState(0);
+  return <div>This is App.jsx</div>;
 }
